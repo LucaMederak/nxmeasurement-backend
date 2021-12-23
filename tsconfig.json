@@ -9,18 +9,7 @@
     "forceConsistentCasingInFileNames": true /* Ensure that casing is correct in imports. */,
     "strict": true /* Enable all strict type-checking options. */,
     "skipLibCheck": true,
-    "resolveJsonModule": true,
-    "paths": {
-      "@config/*": ["./src/config/*"],
-      "@interfaces/*": ["./src/api/v1/interfaces/*"],
-      "@schema/*": ["./src/api/v1/schema/*"],
-      "@utils/*": ["./src/api/v1/utils/*"],
-      "@models/*": ["./src/api/v1/models/*"],
-      "@controllers/*": ["./src/api/v1/controllers/*"],
-      "@routes/*": ["./src/api/v1/routes/*"],
-      "@middleware/*": ["./src/api/v1/middleware/*"],
-      "@services/*": ["./src/api/v1/services/*"]
-    } /* Skip type checking all .d.ts files. */
+    "resolveJsonModule": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "dist", "__tests__", "coverage"]

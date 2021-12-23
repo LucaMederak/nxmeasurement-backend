@@ -7,7 +7,7 @@ import {
   deleteClientController,
   getClientController,
   getClientsController,
-} from '@controllers/client.controller';
+} from '../controllers/client.controller';
 
 //schema
 import {
@@ -15,11 +15,11 @@ import {
   deleteClientSchema,
   getClientSchema,
   updateClientSchema,
-} from '@schema/client.schema';
+} from '../schema/client.schema';
 
 //middleware
-import requireUser from '@middleware/requireUser';
-import validateSchema from '@middleware/validateSchema';
+import requireUser from '../middleware/requireUser';
+import validateSchema from '../middleware/validateSchema';
 
 const router = express.Router();
 

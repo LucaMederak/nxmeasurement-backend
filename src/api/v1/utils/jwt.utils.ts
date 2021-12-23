@@ -1,5 +1,5 @@
 import jwt from 'jsonwebtoken';
-import { privateKey, publicKey } from '@config/config';
+import { privateKey, publicKey } from '../../../config/config';
 
 export function signJwt(object: Object, options?: jwt.SignOptions | undefined) {
   return jwt.sign(object, privateKey, {

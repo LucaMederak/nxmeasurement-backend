@@ -1,8 +1,7 @@
 import mongoose from 'mongoose';
 import bcrypt from 'bcrypt';
-import config from 'config';
-
-import { IUserDocument } from '@interfaces/user.interfaces';
+import { saltWorkFactor } from '../../../config/config';
+import { IUserDocument } from '../interfaces/user.interfaces';
 
 const Schema = mongoose.Schema;
 
@@ -30,7 +29,7 @@ UserSchema.pre('save', async function (next) {
     return next();
   }
 
-  const salt = await bcrypt.genSalt(config.get<number>('saltWorkFactor'));
+  const salt = await bcrypt.genSalt(saltWorkFactor);
 
   const hash = await bcrypt.hashSync(user.password, salt);
 

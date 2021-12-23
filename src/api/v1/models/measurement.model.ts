@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { IMeasurementDocument } from '@interfaces/measurement.interfaces';
+import { IMeasurementDocument } from '../interfaces/measurement.interfaces';
 
 const Schema = mongoose.Schema;
 

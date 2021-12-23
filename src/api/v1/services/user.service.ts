@@ -1,7 +1,7 @@
 import { FilterQuery } from 'mongoose';
 import { omit } from 'lodash';
-import UserModel from '@models/user.model';
-import { IUserInput, IUserDocument } from '@interfaces/user.interfaces';
+import UserModel from '../models/user.model';
+import { IUserInput, IUserDocument } from '../interfaces/user.interfaces';
 
 export async function createUser(input: IUserInput) {
   try {

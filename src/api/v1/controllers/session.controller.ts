@@ -1,12 +1,12 @@
 import { Request, Response } from 'express';
-import { accessTokenTtl, refreshTokenTtl } from '@config/config';
+import { accessTokenTtl, refreshTokenTtl } from '../../../config/config';
 import {
   createSession,
   findSessions,
   updateSession,
-} from '@services/session.service';
-import { validatePassword } from '@services/user.service';
-import { signJwt } from '@utils/jwt.utils';
+} from '../services/session.service';
+import { validatePassword } from '../services/user.service';
+import { signJwt } from '../utils/jwt.utils';
 
 export async function createUserSessionController(req: Request, res: Response) {
   // Validate the user's password

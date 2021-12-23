@@ -1,14 +1,16 @@
-require('module-alias/register');
 import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
 import { port } from './config/config';
 import responseTime from 'response-time';
-import connect from '@utils/connect';
-import logger from '@utils/logger';
-import routes from '@routes/routes';
-import deserializeUser from '@middleware/deserializeUser';
-import { restResponseTimeHistogram, startMetricsServer } from '@utils/metrics';
-import swaggerDocs from '@utils/swagger';
+import connect from './api/v1/utils/connect';
+import logger from './api/v1/utils/logger';
+import routes from './api/v1/routes/routes';
+import deserializeUser from './api/v1/middleware/deserializeUser';
+import {
+  restResponseTimeHistogram,
+  startMetricsServer,
+} from './api/v1/utils/metrics';
+import swaggerDocs from './api/v1/utils/swagger';
 import cors from 'cors';
 
 dotenv.config();

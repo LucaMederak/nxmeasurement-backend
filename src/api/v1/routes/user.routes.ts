@@ -4,14 +4,14 @@ import express from 'express';
 import {
   createUserController,
   getUserController,
-} from '@controllers/user.controller';
+} from '../controllers/user.controller';
 
 //schema
-import { createUserSchema } from '@schema/user.schema';
+import { createUserSchema } from '../schema/user.schema';
 
 //middleware
-import validateSchema from '@middleware/validateSchema';
-import requireUser from '@middleware/requireUser';
+import validateSchema from '../middleware/validateSchema';
+import requireUser from '../middleware/requireUser';
 
 const router = express.Router();
 

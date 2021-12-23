@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { IClientDocument } from '@interfaces/client.interfaces';
+import { IClientDocument } from '../interfaces/client.interfaces';
 
 const Schema = mongoose.Schema;
 

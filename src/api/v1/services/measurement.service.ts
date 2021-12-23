@@ -1,12 +1,12 @@
 import { FilterQuery, QueryOptions, UpdateQuery } from 'mongoose';
 
-import MeasurementModel from '@models/measurement.model';
+import MeasurementModel from '../models/measurement.model';
 import {
   IMeasurementInput,
   IMeasurementDocument,
-} from '@interfaces/measurement.interfaces';
+} from '../interfaces/measurement.interfaces';
 
-import { databaseResponseTimeHistogram } from '@utils/metrics';
+import { databaseResponseTimeHistogram } from '../utils/metrics';
 
 export async function createMeasurement(input: IMeasurementInput) {
   const metricsLabels = {

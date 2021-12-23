@@ -1,11 +1,11 @@
 import { get } from 'lodash';
-import config from 'config';
+import { accessTokenTtl } from '../../../config/config';
 import { FilterQuery, UpdateQuery } from 'mongoose';
-import SessionModel from '@models/session.model';
-import { ISessionDocument } from '@interfaces/session.interfaces';
-import { IUserDocument } from '@interfaces/user.interfaces';
-import { verifyJwt, signJwt } from '@utils/jwt.utils';
-import { getUser } from '@services/user.service';
+import SessionModel from '../models/session.model';
+import { ISessionDocument } from '../interfaces/session.interfaces';
+import { IUserDocument } from '../interfaces/user.interfaces';
+import { verifyJwt, signJwt } from '../utils/jwt.utils';
+import { getUser } from '../services/user.service';
 
 export async function createSession(
   userId: IUserDocument['_id'],
@@ -46,7 +46,7 @@ export async function reIssueAccessToken({
 
   const accessToken = signJwt(
     { ...user, session: session._id },
-    { expiresIn: config.get('accessTokenTtl') } // 15 minutes
+    { expiresIn: accessTokenTtl } // 15 minutes
   );
 
   return accessToken;

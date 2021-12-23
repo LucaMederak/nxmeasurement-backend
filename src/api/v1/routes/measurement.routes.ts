@@ -7,7 +7,7 @@ import {
   deleteMeasurementController,
   getMeasurementController,
   getMeasurementsController,
-} from '@controllers/measurement.controller';
+} from '../controllers/measurement.controller';
 
 //schema
 import {
@@ -15,11 +15,11 @@ import {
   deleteMeasurementSchema,
   getMeasurementSchema,
   updateMeasurementSchema,
-} from '@schema/measurement.schema';
+} from '../schema/measurement.schema';
 
 //middleware
-import requireUser from '@middleware/requireUser';
-import validateSchema from '@middleware/validateSchema';
+import requireUser from '../middleware/requireUser';
+import validateSchema from '../middleware/validateSchema';
 
 const router = express.Router();
 

@@ -4,14 +4,14 @@ import {
   UpdateMeasurementInput,
   DeleteMeasurementInput,
   GetMeasurementInput,
-} from '@schema/measurement.schema';
+} from '../schema/measurement.schema';
 import {
   createMeasurement,
   deleteMeasurement,
   getAndUpdateMeasurement,
   getMeasurement,
   getMeasurements,
-} from '@services/measurement.service';
+} from '../services/measurement.service';
 
 export async function createMeasurementController(
   req: Request<{}, {}, CreateMeasurementInput['body']>,

@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { dbUri } from '@config/config';
+import { dbUri } from '../../../config/config';
 import logger from './logger';
 
 async function connect() {

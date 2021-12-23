@@ -1,9 +1,9 @@
 import { FilterQuery, QueryOptions, UpdateQuery } from 'mongoose';
 
-import ClientModel from '@models/client.model';
-import { IClientInput, IClientDocument } from '@interfaces/client.interfaces';
+import ClientModel from '../models/client.model';
+import { IClientInput, IClientDocument } from '../interfaces/client.interfaces';
 
-import { databaseResponseTimeHistogram } from '@utils/metrics';
+import { databaseResponseTimeHistogram } from '../utils/metrics';
 
 export async function createClient(input: IClientInput) {
   const metricsLabels = {

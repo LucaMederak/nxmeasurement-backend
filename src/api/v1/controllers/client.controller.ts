@@ -4,14 +4,14 @@ import {
   UpdateClientInput,
   DeleteClientInput,
   GetClientInput,
-} from '@schema/client.schema';
+} from '../schema/client.schema';
 import {
   createClient,
   deleteClient,
   getAndUpdateClient,
   getClient,
   getClients,
-} from '@services/client.service';
+} from '../services/client.service';
 
 export async function createClientController(
   req: Request<{}, {}, CreateClientInput['body']>,

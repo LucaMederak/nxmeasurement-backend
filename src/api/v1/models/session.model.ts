@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-import { ISessionDocument } from '@interfaces/session.interfaces';
+import { ISessionDocument } from '../interfaces/session.interfaces';
 
 const Schema = mongoose.Schema;
 

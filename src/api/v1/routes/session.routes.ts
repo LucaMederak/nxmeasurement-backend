@@ -5,14 +5,14 @@ import {
   createUserSessionController,
   deleteUserSessionController,
   getUserSessionsController,
-} from '@controllers/session.controller';
+} from '../controllers/session.controller';
 
 //schema
-import { createSessionSchema } from '@schema/session.schema';
+import { createSessionSchema } from '../schema/session.schema';
 
 //middleware
-import validateSchema from '@middleware/validateSchema';
-import requireUser from '@middleware/requireUser';
+import validateSchema from '../middleware/validateSchema';
+import requireUser from '../middleware/requireUser';
 
 const router = express.Router();
 

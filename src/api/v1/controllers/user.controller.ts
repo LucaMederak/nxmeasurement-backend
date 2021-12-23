@@ -1,10 +1,10 @@
-import { accessTokenTtl, refreshTokenTtl } from '@config/config';
+import { accessTokenTtl, refreshTokenTtl } from '../../../config/config';
 import { Request, Response } from 'express';
-import { CreateUserInput } from '@schema/user.schema';
-import { createUser, getUser, validateEmail } from '@services/user.service';
-import { createSession } from '@services/session.service';
-import logger from '@utils/logger';
-import { signJwt } from '@utils/jwt.utils';
+import { CreateUserInput } from '../schema/user.schema';
+import { createUser, getUser, validateEmail } from '../services/user.service';
+import { createSession } from '../services/session.service';
+import logger from '../utils/logger';
+import { signJwt } from '../utils/jwt.utils';
 
 export async function createUserController(
   req: Request<{}, {}, CreateUserInput['body']>,
