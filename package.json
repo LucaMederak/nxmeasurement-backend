@@ -18,7 +18,7 @@
   },
   "scripts": {
     "dev": "nodemon src/app.ts",
-    "start": "node -r tsconfig-paths/register -r ts-node/register dist/src/app.js",
+    "start": "node dist/src/app.js",
     "build": "tsc -p .",
     "test": "jest",
     "test:unit": "jest unit",
@@ -91,15 +91,15 @@
     "zod": "^3.11.6"
   },
   "_moduleAliases": {
-    "@config/*": "dist/src/config",
-    "@interfaces/*": "dist/src/api/v1/interfaces",
-    "@schema/*": "dist/src/api/v1/schema",
-    "@utils/*": "dist/src/api/v1/utils",
-    "@models/*": "dist/src/api/v1/models",
-    "@controllers/*": "dist/src/api/v1/controllers",
-    "@routes/*": "dist/src/api/v1/routes",
-    "@middleware/*": "dist/src/api/v1/middleware",
-    "@services/*": "dist/src/api/v1/services"
+    "@config/*": "dist/src/config/*",
+    "@interfaces/*": "dist/src/api/v1/interfaces/*",
+    "@schema/*": "dist/src/api/v1/schema/*",
+    "@utils/*": "dist/src/api/v1/utils/*",
+    "@models/*": "dist/src/api/v1/models/*",
+    "@controllers/*": "dist/src/api/v1/controllers/*",
+    "@routes/*": "dist/src/api/v1/routes/*",
+    "@middleware/*": "dist/src/api/v1/middleware/*",
+    "@services/*": "dist/src/api/v1/services/*"
   },
   "config": {
     "commitizen": {
