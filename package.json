@@ -24,7 +24,6 @@
     "test:unit": "jest unit",
     "test:int": "jest int",
     "test:coverage": "jest --coverage",
-    "prepare": "husky install",
     "lint": "eslint .  --ext .ts",
     "lint-fix": "eslint --fix .  --ext .ts"
   },
@@ -57,7 +56,6 @@
     "eslint-plugin-jest": "^24.4.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-promise": "^5.1.0",
-    "husky": "^7.0.2",
     "jest": "^27.1.0",
     "lint-staged": "^11.1.2",
     "nodemon": "^2.0.12",
