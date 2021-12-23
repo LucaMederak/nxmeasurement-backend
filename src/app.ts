@@ -1,6 +1,6 @@
 import express, { Request, Response } from 'express';
 import dotenv from 'dotenv';
-import { port } from './config/config';
+import { port } from '@config/config';
 import responseTime from 'response-time';
 import connect from '@utils/connect';
 import logger from '@utils/logger';
