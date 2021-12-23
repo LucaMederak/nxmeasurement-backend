@@ -1,1 +1,0 @@
-web: node -r tsconfig-paths/register -r ts-node/register dist/src/app.js
