@@ -122,10 +122,5 @@
     "@services/*": [
       "dist/src/api/v1/services/*"
     ]
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
