@@ -94,6 +94,35 @@
     "swagger-ui-express": "^4.1.6",
     "zod": "^3.11.6"
   },
+  "_moduleAliases": {
+    "@config/*": [
+      "dist/src/config/*"
+    ],
+    "@interfaces/*": [
+      "dist/src/api/v1/interfaces/*"
+    ],
+    "@schema/*": [
+      "dist/src/api/v1/schema/*"
+    ],
+    "@utils/*": [
+      "dist/src/api/v1/utils/*"
+    ],
+    "@models/*": [
+      "dist/src/api/v1/models/*"
+    ],
+    "@controllers/*": [
+      "dist/src/api/v1/controllers/*"
+    ],
+    "@routes/*": [
+      "dist/src/api/v1/routes/*"
+    ],
+    "@middleware/*": [
+      "dist/src/api/v1/middleware/*"
+    ],
+    "@services/*": [
+      "dist/src/api/v1/services/*"
+    ]
+  },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
