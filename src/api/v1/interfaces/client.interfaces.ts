@@ -8,7 +8,7 @@ export interface IClientInput {
   sex: 'mężczyzna' | 'kobieta';
   age: number;
   email?: string;
-  avatar: string;
+  avatar?: string;
 }
 
 export interface IClientDocument extends IClientInput, mongoose.Document {

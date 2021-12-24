@@ -13,7 +13,6 @@ const ClientSchema = new Schema<IClientDocument>(
     age: { type: Number, required: true },
     avatar: {
       type: String,
-      required: true,
       default:
         'https://upload.wikimedia.org/wikipedia/commons/7/7c/User_font_awesome.svg',
     },

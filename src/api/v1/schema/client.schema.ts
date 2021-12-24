@@ -13,7 +13,7 @@ const payload = {
       required_error: 'Age is required',
     }).min(1, 'Age too short - should be 1 year minimum'),
     email: string().email('Not a valid email').optional(),
-    avatar: string(),
+    avatar: string().optional(),
   }),
 };
 
