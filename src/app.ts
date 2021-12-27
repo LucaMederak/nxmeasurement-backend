@@ -1,5 +1,5 @@
 import express, { Request, Response } from 'express';
-import dotenv from 'dotenv';
+
 import { port } from './config/config';
 import responseTime from 'response-time';
 import connect from './api/v1/utils/connect';
@@ -12,8 +12,6 @@ import {
 } from './api/v1/utils/metrics';
 import swaggerDocs from './api/v1/utils/swagger';
 import cors from 'cors';
-
-dotenv.config();
 
 const app = express();
 

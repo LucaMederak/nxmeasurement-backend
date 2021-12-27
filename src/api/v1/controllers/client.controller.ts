@@ -56,7 +56,6 @@ export async function getClientController(
   req: Request<GetClientInput['params']>,
   res: Response
 ) {
-  //client user id
   const userId = res.locals.user._id;
   const clientId = req.params.clientId;
 
