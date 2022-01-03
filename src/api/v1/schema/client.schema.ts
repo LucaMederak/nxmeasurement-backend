@@ -1,4 +1,4 @@
-import { object, number, string, TypeOf, z } from 'zod';
+import { object, number, string, TypeOf, z, literal } from 'zod';
 
 const payload = {
   body: object({
@@ -12,7 +12,7 @@ const payload = {
     age: number({
       required_error: 'Age is required',
     }).min(1, 'Age too short - should be 1 year minimum'),
-    email: string().email('Not a valid email').optional(),
+    email: string().email('Not a valid email').optional().or(literal('')),
     avatar: string().optional(),
   }),
 };

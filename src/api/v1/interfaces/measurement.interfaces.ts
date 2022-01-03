@@ -11,12 +11,13 @@ export interface IMeasurementInput {
   height: number;
   pal: number;
   bmi: number;
+  bmi_type: 'niedowaga' | 'norma' | 'nadwaga' | 'otyłość';
   ppm_mifflin: number;
   ppm_harris: number;
+  cpm: number;
   whr?: number;
   whtr?: number;
   ymca?: number;
-  bmc?: number;
   //circuits
   chest_breath?: number;
   chest_exhaust?: number;

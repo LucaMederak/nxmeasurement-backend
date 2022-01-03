@@ -32,7 +32,7 @@ export async function createUserSessionController(req: Request, res: Response) {
   );
 
   // return access & refresh tokens
-  return res.send({ accessToken, refreshToken });
+  return res.send({ user, accessToken, refreshToken });
 }
 
 export async function getUserSessionsController(req: Request, res: Response) {

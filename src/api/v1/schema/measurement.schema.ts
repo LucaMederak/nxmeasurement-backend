@@ -11,10 +11,10 @@ const payload = {
     notes: string().optional(),
     weight: number({
       required_error: 'Weight is required',
-    }).min(0.1, 'Weight too short - should 0.1 kg minimum'),
+    }).positive(),
     height: number({
       required_error: 'Height is required',
-    }).min(0.1, 'Height too short - should 1 cm minimum'),
+    }).positive(),
     pal: number({
       required_error: 'Pal is required',
     })
@@ -23,16 +23,19 @@ const payload = {
     bmi: number({
       required_error: 'Bmi is required',
     }).min(16, 'Height too short - should 16 minimum'),
+    bmi_type: z.enum(['niedowaga', 'norma', 'nadwaga', 'otyłość']),
     ppm_mifflin: number({
       required_error: 'Ppm mifflin is required',
-    }),
+    }).positive(),
     ppm_harris: number({
       required_error: 'Ppm harris is required',
-    }),
+    }).positive(),
+    cpm: number({
+      required_error: 'Cpm is required',
+    }).positive(),
     whr: number().optional(),
     whtr: number().optional(),
     ymca: number().optional(),
-    bmc: number().optional(),
     chest_breath: number().optional(),
     chest_exhaust: number().optional(),
     shoulder: number().optional(),
